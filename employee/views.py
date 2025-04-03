@@ -3,4 +3,8 @@ from django.http import HttpResponse
 
 
 def employee(request):
-    return HttpResponse("This is the employee page")
+    return HttpResponse("This is the employee's page")
+
+
+def profile(request):
+    return render(request, "employee/profile.html")
