@@ -31,14 +31,24 @@
        
       <div class="col-lg-10">
         <b><h4 class="text-center text-forestgreen">Login to your Account</h4></b> 
+
+        {% for message in messages %}
+          <div class="alert {{ message.tags }} alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            {{ message }}
+          </div>
+        {% endfor %}
+
         <form action="" method="post">
           {% csrf_token %}
         <div class="form-group"> 
           <div class="col-md-12 form-group">
-             <input type="email" name="email" class="form-control text-center" id="name" placeholder="Your Email" required="">
+             <input type="text" name="username" class="form-control text-center" id="username" placeholder="Your Username" required="">
           </div><br>
           <div class="col-md-12 form-group">
-            <input type="password" name="password" class="form-control text-center" id="name" placeholder="Your Password" required="">
+            <input type="password" name="password" class="form-control text-center" id="password" placeholder="Your Password" required="">
           </div><br>
         </div>  
           <div class="text-center"><button class="btn btn-success" type="submit">Login</button></div><br>

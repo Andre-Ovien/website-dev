@@ -23,9 +23,17 @@ def blog(request):
     return render(request, "blog.html")
 
 
+def blogdetails(request):
+    return render(request, "blogdetails.html")
+
+
 def price(request):    
     return render(request, "price.html")
 
 
 def service(request):    
     return render(request, "service.html")
+
+
+def servicedetails(request):
+    return render(request, "servicedetail.html")
